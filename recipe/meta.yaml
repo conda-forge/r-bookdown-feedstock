@@ -27,14 +27,14 @@ requirements:
     - r-knitr >=1.16
     - r-rmarkdown >=1.5
     - r-yaml >=2.1.14
-    - xfun
+    - r-xfun
   run:
     - r-base
     - r-htmltools >=0.3.6
     - r-knitr >=1.16
     - r-rmarkdown >=1.5
     - r-yaml >=2.1.14
-    - xfun
+    - r-xfun
 
 test:
   commands:
