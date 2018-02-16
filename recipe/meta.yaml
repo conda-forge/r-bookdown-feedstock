@@ -1,4 +1,5 @@
 {% set version = '0.6' %}
+
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -16,6 +17,7 @@ source:
 build:
   number: 0
   skip: true  # [win32]
+
   rpaths:
     - lib/R/lib/
     - lib/
@@ -26,15 +28,16 @@ requirements:
     - r-htmltools >=0.3.6
     - r-knitr >=1.16
     - r-rmarkdown >=1.5
-    - r-yaml >=2.1.14
     - r-xfun
+    - r-yaml >=2.1.14
+
   run:
     - r-base
     - r-htmltools >=0.3.6
     - r-knitr >=1.16
     - r-rmarkdown >=1.5
-    - r-yaml >=2.1.14
     - r-xfun
+    - r-yaml >=2.1.14
 
 test:
   commands:
@@ -45,10 +48,12 @@ about:
   home: https://github.com/rstudio/bookdown
   license: GPL-3
   summary: Output formats and utilities for authoring books and technical documents with R Markdown.
-  license_family: GPL3
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
+  license_family: GPL3n  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]n  license_file: '{{ environ["PREFIX"] }}\R[[:space:]]hare\licenses\GPL-3'  # [win]
+
 extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
     - bsennblad
