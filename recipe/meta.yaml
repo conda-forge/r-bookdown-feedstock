@@ -28,6 +28,7 @@ requirements:
     - r-htmltools >=0.3.6
     - r-knitr >=1.16
     - r-rmarkdown >=1.5
+    - r-tinytex
     - r-xfun
     - r-yaml >=2.1.14
 
@@ -36,6 +37,7 @@ requirements:
     - r-htmltools >=0.3.6
     - r-knitr >=1.16
     - r-rmarkdown >=1.5
+    - r-tinytex
     - r-xfun
     - r-yaml >=2.1.14
 
