@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/bookdown_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/bookdown/bookdown_{{ version }}.tar.gz
-  sha256: ec6b3502a2b15c582edfe0c8ebca917106e82d83e6e52b1d1af4ef2988a5bddf
+  sha256: b824d7beafea8be369dfd656a314dca36019d521cbfa39b82ff0fe405ce06eac
 
 build:
   number: 0
