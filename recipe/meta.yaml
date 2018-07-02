@@ -1,5 +1,4 @@
 {% set version = '0.7' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,20 +9,21 @@ package:
 source:
   fn: bookdown_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/bookdown_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/bookdown/bookdown_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/bookdown_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/bookdown/bookdown_{{ version }}.tar.gz
   sha256: b824d7beafea8be369dfd656a314dca36019d521cbfa39b82ff0fe405ce06eac
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+  host:
     - r-base
     - r-htmltools >=0.3.6
     - r-knitr >=1.16
@@ -31,7 +31,6 @@ requirements:
     - r-tinytex
     - r-xfun
     - r-yaml >=2.1.14
-
   run:
     - r-base
     - r-htmltools >=0.3.6
@@ -43,7 +42,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('bookdown')"  # [not win]
+    - $R -e "library('bookdown')"           # [not win]
     - "\"%R%\" -e \"library('bookdown')\""  # [win]
 
 about:
@@ -60,4 +59,5 @@ extra:
     - bgruening
     - daler
     - jdblischak
-    - bsennblad
+    - cbrueffer
+    - ConorIA
