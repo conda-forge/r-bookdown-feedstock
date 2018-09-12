@@ -15,7 +15,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -23,6 +23,7 @@ build:
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-htmltools >=0.3.6
@@ -51,14 +52,15 @@ about:
   summary: Output formats and utilities for authoring books and technical documents with R Markdown.
   license_family: GPL3
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["RECIPE_DIR"] }}\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
+    - bsennblad
+    - ConorIA
     - johanneskoester
     - bgruening
     - daler
     - jdblischak
     - cbrueffer
-    - bsennblad
-    - ConorIA
+    - dbast
