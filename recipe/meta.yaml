@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bookdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bookdown/bookdown_{{ version }}.tar.gz
-  sha256: 68b0d8df924edbd3561c86169dfb3b66f51c42004277ea73d31e57d25318fee7
+  sha256: 38eb4c5b877ccd85b16cfe74a48c3bc53de2f276da98e5515f37e7a06e065bb0
 
 build:
   merge_build_host: True  # [win]
