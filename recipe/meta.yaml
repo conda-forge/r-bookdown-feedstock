@@ -23,20 +23,25 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-htmltools >=0.3.6
-    - r-knitr >=1.22
-    - r-rmarkdown >=1.12
+    - r-jquerylib
+    - r-knitr >=1.31
+    - r-rmarkdown >=2.9
     - r-tinytex >=0.12
-    - r-xfun >=0.6
+    - r-xfun >=0.22
+    - r-yaml >=2.1.19
   run:
     - r-base
     - r-htmltools >=0.3.6
-    - r-knitr >=1.22
-    - r-rmarkdown >=1.12
+    - r-jquerylib
+    - r-knitr >=1.31
+    - r-rmarkdown >=2.9
     - r-tinytex >=0.12
-    - r-xfun >=0.6
+    - r-xfun >=0.22
+    - r-yaml >=2.1.19
 
 test:
   commands:
@@ -45,7 +50,7 @@ test:
 
 about:
   home: https://github.com/rstudio/bookdown
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Output formats and utilities for authoring books and technical documents with R Markdown.
   license_family: GPL3
   license_file:
@@ -53,9 +58,9 @@ about:
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - bsennblad
     - ConorIA
-    - conda-forge/r
 
 # Package: bookdown
 # Type: Package
