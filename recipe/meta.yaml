@@ -1,4 +1,4 @@
-{% set version = "0.28" %}
+{% set version = "0.29" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bookdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bookdown/bookdown_{{ version }}.tar.gz
-  sha256: 425548d1bedfeb0dddddba7df75a70a85889ee200ea8791302ca7b652261192b
+  sha256: 5b4e3dc44a5c6574e3d9e19ebe7897d3ddcf6eaffe8214e1d272b545929ff723
 
 build:
   merge_build_host: true  # [win]
