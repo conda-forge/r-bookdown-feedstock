@@ -58,7 +58,6 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - bsennblad
-    - ConorIA
 
 # Package: bookdown
 # Type: Package
