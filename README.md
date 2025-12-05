@@ -143,7 +143,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@ConorIA](https://github.com/ConorIA/)
 * [@bsennblad](https://github.com/bsennblad/)
 * [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 
