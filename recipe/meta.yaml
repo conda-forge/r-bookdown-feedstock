@@ -1,4 +1,4 @@
-{% set version = "0.46" %}
+{% set version = "0.47" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bookdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bookdown/bookdown_{{ version }}.tar.gz
-  sha256: 5d94e9ffc72d63d20f88f2bdc5289bd220cd375084adf52e0f6a6787aafad363
+  sha256: 687a06a53feb04b167a3eb086a47ec0adafab0b2a97dcfc275f933d6e979b52f
 
 build:
   number: 0
