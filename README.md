@@ -3,11 +3,13 @@ About r-bookdown-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bookdown-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/rstudio/bookdown
+Home: https://pkgs.rstudio.com/bookdown/
 
 Package license: GPL-3.0-only
 
 Summary: Output formats and utilities for authoring books and technical documents with R Markdown.
+
+Development: https://github.com/rstudio/bookdown
 
 Current build status
 ====================
