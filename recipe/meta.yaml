@@ -3,7 +3,7 @@
 
 package:
   name: r-bookdown
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
@@ -17,6 +17,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -26,19 +30,19 @@ requirements:
     - r-base
     - r-htmltools >=0.3.6
     - r-jquerylib
-    - r-knitr >=1.31
-    - r-rmarkdown >=2.9
+    - r-knitr >=1.38
+    - r-rmarkdown >=2.14
     - r-tinytex >=0.12
-    - r-xfun >=0.22
+    - r-xfun >=0.48
     - r-yaml >=2.1.19
   run:
     - r-base
     - r-htmltools >=0.3.6
     - r-jquerylib
-    - r-knitr >=1.31
-    - r-rmarkdown >=2.9
+    - r-knitr >=1.38
+    - r-rmarkdown >=2.14
     - r-tinytex >=0.12
-    - r-xfun >=0.22
+    - r-xfun >=0.48
     - r-yaml >=2.1.19
 
 test:
@@ -47,7 +51,8 @@ test:
     - "\"%R%\" -e \"library('bookdown')\""  # [win]
 
 about:
-  home: https://github.com/rstudio/bookdown
+  home: https://pkgs.rstudio.com/bookdown/
+  dev_url: https://github.com/rstudio/bookdown
   license: GPL-3.0-only
   summary: Output formats and utilities for authoring books and technical documents with R Markdown.
   license_family: GPL3
